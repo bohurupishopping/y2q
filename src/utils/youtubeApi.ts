@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/api';
+const BASE_URL = 'https://y2q.vercel.app/api'; // Update this to your deployed API URL
 
 export interface CommentData {
   text: string;
