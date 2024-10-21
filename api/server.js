@@ -6,7 +6,6 @@ import cors from 'cors';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
@@ -64,6 +63,5 @@ app.get('/api/videos/:videoId', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Export the app for Vercel serverless function
+export default app; // Correcting the export statement
